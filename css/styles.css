@@ -6,6 +6,7 @@
     --brand-color-blue: #2196f3;
     --brand-color-dark: #2f303a;
     --brand-color-dark-transparent: #2f303a66;
+    --aboutus-hero-background: #2f303acc;
     --brand-color-grey-icon: #afb1b8;
     --icons-inactive: #afb1b8;
     --footer-social-icon-bg: rgba(255, 255, 255, 0.1);
@@ -228,6 +229,33 @@ ul {
     margin-bottom: 94px;
 }
 
+/* aboutus section */
+
+.ul-flex {
+    display: flex;
+    flex-direction: row;
+}
+.aboutus-item {
+    position: relative;
+}
+
+.aboutus-img {
+    display: block;
+}
+
+.aboutus-hero {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 27px 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white);
+    font-weight: 700;
+    background-color: var(--aboutus-hero-background);
+}
+/* aboutus section */
 .section-title-who {
     font-weight: 700;
     font-size: 36px;
