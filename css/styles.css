@@ -6,6 +6,7 @@
     --brand-color-blue: #2196f3;
     --brand-color-transparent: #2196f3e5;
     --brand-color-dark: #2f303a;
+    --brand-color-white-transparent: #ffffff99;
     --brand-color-dark-transparent: #2f303a66;
     --aboutus-hero-background: #2f303acc;
     --brand-color-grey-icon: #afb1b8;
@@ -99,6 +100,13 @@ ul {
     color: var(--brand-color-blue);
 }
 
+.header-link:hover,
+.header-link:focus {
+    color: var(--brand-color-blue);
+}
+.active-nav-link {
+    color: var(--brand-color-blue);
+}
 .active-nav-links::after {
     content: "";
     position: absolute;
@@ -107,10 +115,14 @@ ul {
     width: 100%;
     height: 4px;
     border-radius: 2px;
-    background-color: var(--brand-color-bluer);
+    background-color: var(--brand-color-blue);
     pointer-events: none;
+    /* display: none; */
 }
 
+/* .active-nav-links:hover::after {
+    display: block;
+} */
 .header-link {
     transition: color var(--transition-set);
 }
@@ -344,6 +356,7 @@ ul {
     --color2: currentColor;
     --color3: currentColor;
     fill: currentColor;
+    transition: color var(--transition-set);
 }
 
 .clients-icon {
@@ -352,6 +365,7 @@ ul {
     border: 1px solid var(--icons-inactive);
     border-radius: var(--border-radius-default);
     color: var(--icons-inactive);
+    transition: border var(--transition-set);
 }
 .clients-list {
     display: flex;
@@ -410,6 +424,10 @@ ul {
     margin-top: 9px;
 }
 
+.address-contact {
+    color: var(--brand-color-white-transparent);
+    transition: color var(--transition-set);
+}
 .footer-joinus-box {
     padding-top: 12px;
     padding-left: 70px;
@@ -433,6 +451,7 @@ ul {
 .social-icon-svg {
     /* --color3: var(--icons-inactive); */
     fill: currentColor;
+    transition: color var(--transition-set);
 }
 
 .social-icons {
@@ -440,6 +459,7 @@ ul {
     gap: 10px;
     justify-content: center;
     padding-bottom: 30px;
+    transition: background-color var(--transition-set);
 }
 
 .social-icon {
@@ -448,6 +468,7 @@ ul {
     font-size: 0;
     border-radius: 50%;
     color: currentColor;
+    transition: background-color var(--transition-set);
 }
 /* .social-icon-svg:hover,
 .social-icon-svg:focus {
@@ -549,6 +570,8 @@ portolio.html
     letter-spacing: 0.03em;
     padding: 6px 22px 6px 22px;
     color: var(--brand-color);
+    transition: background-color var(--transition-set),
+        color var(--transition-set), box-shadow var(--transition-set);
 }
 .portfolio-button-filter:hover {
     background-color: var(--brand-color-blue);
@@ -592,6 +615,7 @@ portolio.html
     height: 404px;
     background-color: var(--brand-color-white);
     border: 1px solid #eeeeee;
+    transition: box-shadow var(--transition-set);
 }
 
 .card-item:hover {
