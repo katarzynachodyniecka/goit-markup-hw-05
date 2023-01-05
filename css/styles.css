@@ -96,7 +96,8 @@ ul {
     color: var(--brand-color-black);
 }
 
-.nav-links:hover {
+.nav-links:hover,
+.nav-links:fokus {
     color: var(--brand-color-blue);
 }
 
@@ -117,12 +118,13 @@ ul {
     border-radius: 2px;
     background-color: var(--brand-color-blue);
     pointer-events: none;
-    /* display: none; */
+    display: none;
 }
 
-/* .active-nav-links:hover::after {
+.active-nav-links:hover::after,
+.active-nav-links:focus::after {
     display: block;
-} */
+}
 .header-link {
     transition: color var(--transition-set);
 }
@@ -493,6 +495,7 @@ ul {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.4);
 }
 
 .modal-backdrop {
