@@ -16,13 +16,11 @@
     --transition-set: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-::after,
-::before {
-    box-sizing: border-box;
-}
+
 body {
     font-family: "Roboto", sans-serif;
     color: var(--brand-color-black);
@@ -61,9 +59,6 @@ ul {
     flex-wrap: wrap;
     gap: 46px;
     align-items: center;
-    /* width: 254px;
-    margin-top: 32px;
-    margin-bottom: 32px; */
 }
 
 .logo-header {
@@ -107,12 +102,12 @@ ul {
     transition: color var(--transition-set);
 }
 .active-nav-link {
-    color: var(--brand-color-blue);
+    color: var(--brand-color-black);
 }
 .active-here {
     color: var(--brand-color-blue);
 }
-.active-nav-links::after {
+.active-nav-link::after {
     content: "";
     position: absolute;
     bottom: -34px;
@@ -124,10 +119,10 @@ ul {
     pointer-events: none;
     display: none;
 }
-
-.active-nav-links:hover::after,
-.active-nav-links:focus::after,
-.active-nav-links:active::after {
+.active-nav-link:visited::after,
+.active-nav-link:active::after,
+.active-nav-link:hover::after,
+.active-nav-link:focus::after {
     display: block;
 }
 .header-link {
@@ -525,6 +520,7 @@ ul {
     border-radius: 50%;
     background-color: var(--brand-color-white);
     cursor: pointer;
+    fill: var(--brand-color-black);
 }
 
 .modal-close-btn-x {
@@ -558,7 +554,7 @@ portolio.html
 .portfolio-button-filter {
     background-color: var(--brand-color-lightgrey);
     border-radius: 4px;
-    border-color: var(--brand-color-lightgrey);
+    border: 0px;
 
     font-family: "Roboto";
     font-weight: 500;
